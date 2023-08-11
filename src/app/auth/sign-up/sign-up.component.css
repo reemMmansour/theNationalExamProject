@@ -1,0 +1,126 @@
+/* **************** */
+/* **************** */
+/* ***** Grid ***** */
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ***** right side ***** */
+.right-side {
+  background-color: var(--main-color);
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container {
+  width: 35rem;
+  padding: 3rem;
+  background-color: white;
+  border: dashed var(--main-color);
+}
+.form-title {
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--main-text-color);
+  margin-bottom: 10px;
+}
+.input-style {
+  color: rgba(111, 40, 119, 0.25);
+  font-size: 14px;
+  /* font-family: Alexandria; */
+  font-weight: 300;
+  word-wrap: break-word;
+  /* background-color: var(--input-color); */
+}
+
+button {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+.log-in-div {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.log-in-div p > a:hover {
+  font-weight: 600;
+}
+/* ***** left side ***** */
+.left-side {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 35rem;
+}
+.image img {
+  width: 100%;
+}
+
+/* ******************** */
+/* change background color for input */
+.mat-mdc-text-field-wrapper {
+  background-color: var(--input-color);
+}
+
+::ng-deep
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__leading,
+::ng-deep
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__notch,
+::ng-deep
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
+    .mdc-text-field--focused
+  ):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing {
+  border-color: var(--input-color);
+}
+
+.mdc-text-field--no-label {
+  /* color: #f94747; */
+  border-color: var(--input-color);
+  outline-color: var(--input-color);
+}
+
+.mdc-radio__native-control {
+  color: var(--main-color);
+}

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="main-container">
+    <!-- Sign Up Form -->
+    <div class="right-side">
+      <div class="form-container ">
+        <div class="form-title">
+          <h1>تسجيل الدخول</h1>
+        </div>
+        <form formGroup="form" class="form">
+          <!-- user name field -->
+          <label>اسم المستخدم</label>
+          <mat-form-field appearance="outline" >
+            <input class="input-style" matInput placeholder="اسم المستخدم" formControlName="userName">
+            <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
+          </mat-form-field>
+          <!-- Error -->
+          <!-- user code -->
+          <label>رمز الدخول</label>
+          <mat-form-field appearance="outline" >
+            <input matInput type="password" class="input-style" placeholder="رمز الدخول" formControlName="codeNumber">
+            <mat-icon matPrefix> <img src="../../../assets/icons/key.svg" alt=""> </mat-icon>
+            <mat-error *ngIf="form.hasError('required')"> Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button class=" border-0 text-white" color="primary">تسجيل الدخول</button>
+        </form>
+        <!-- Sign Up -->
+        <div class="sign-up-div">
+          <p> ليس لديك حساب ؟<a href="#" class="sign-up" routerLink="/signup"> أنشأ حساب</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- image -->
+    <div class="left-side">
+      <div class="image">
+        <img class="" src="../../../assets/images/Login.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

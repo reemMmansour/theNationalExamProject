@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="main-container">
+    <!-- Sign Up Form -->
+    <div class="right-side">
+      <div class="form-container">
+        <div class="form-title">
+          <h1>إنشاء حساب</h1>
+        </div>
+        <form formGroup="form" class="form">
+          <!-- user name field -->
+          <label>اسم المستخدم</label>
+          <mat-form-field appearance="outline" class="custom-form-field">
+            <input matInput class="input-style" placeholder="اسم المستخدم" formControlName="userName">
+           <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
+
+          </mat-form-field>
+          <!-- Error -->
+          <!-- user phone number field -->
+          <label>رقم الموبايل</label>
+          <mat-form-field appearance="outline" >
+            <input class="input-style" matInput placeholder="رقم الموبايل" formControlName="phoneNumber">
+           <mat-icon matPrefix> <img src="../../../assets/icons/phone.svg" alt=""> </mat-icon>
+
+          </mat-form-field>
+          <!-- Error -->
+          <!-- choose your major -->
+          <mat-radio-group class="majors-group" id="majors" formControlName="majors">
+            <label>اختر الأختصاص</label><br>
+            <mat-radio-button value="dentistry">طب الأسنان</mat-radio-button>
+            <mat-radio-button value="pharmacy">الصيدلة</mat-radio-button>
+            <mat-radio-button value="architecture">الهندسة المعمارية</mat-radio-button>
+            <mat-radio-button value="informaticsEng">الهندسة المعلوماتية</mat-radio-button>
+            <mat-radio-button value="nursing">التمريض</mat-radio-button>
+            <mat-radio-button value="medicine">الطب البشري</mat-radio-button>
+          </mat-radio-group>
+          <button mat-raised-button>إنشاء حساب</button>
+        </form>
+        <div class="log-in-div">
+          <p> لديك حساب ؟ <a href="#" class="log-in" routerLink="/login"> سجل دخول</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- image -->
+    <div class="left-side">
+      <div class="image">
+        <img src="../../../assets/images/signup.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
