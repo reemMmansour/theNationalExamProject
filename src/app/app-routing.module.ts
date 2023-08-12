@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: '', component: SignUpComponent },
   { path: 'signup', component: SignUpComponent },
   { path: 'login', component: LogInComponent },
-  {path:'**',component: PageNotFoundComponent},
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

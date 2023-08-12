@@ -26,15 +26,14 @@
   background-color: white;
   border: dashed var(--main-color);
 }
-.form-title {
-  text-align: center;
-}
+
 .form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-h1 {
+.form-title {
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
 }
@@ -87,40 +86,5 @@ button {
 .image img {
   width: 100%;
 }
+  /* border-color: var(--main-color) !important; */
 
-/* ******************** */
-/* change background color for input */
-.mat-mdc-text-field-wrapper {
-  background-color: var(--input-color);
-}
-
-::ng-deep
-  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
-    .mdc-text-field--focused
-  ):hover
-  .mdc-notched-outline
-  .mdc-notched-outline__leading,
-::ng-deep
-  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
-    .mdc-text-field--focused
-  ):hover
-  .mdc-notched-outline
-  .mdc-notched-outline__notch,
-::ng-deep
-  .mdc-text-field--outlined:not(.mdc-text-field--disabled):not(
-    .mdc-text-field--focused
-  ):hover
-  .mdc-notched-outline
-  .mdc-notched-outline__trailing {
-  border-color: var(--input-color);
-}
-
-.mdc-text-field--no-label {
-  /* color: #f94747; */
-  border-color: var(--input-color);
-  outline-color: var(--input-color);
-}
-
-.mdc-radio__native-control {
-  color: var(--main-color);
-}

@@ -30,3 +30,25 @@ a {
   text-decoration: none;
   color: var(--main-color);
 }
+
+
+/* ******************** */
+/* change background color for input */
+.mat-mdc-text-field-wrapper {
+  background-color: var(--input-color);
+
+}
+/* remove border of input */
+.mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-notched-outline .mdc-notched-outline__trailing  {
+  border: none !important;
+}
+/* ******************** */
+/* change color of radio button */
+.mdc-radio__outer-circle {
+  border-color: var(--main-color) !important;
+}
+.mdc-radio__inner-circle {
+  border-color: var(--main-color) !important;
+}

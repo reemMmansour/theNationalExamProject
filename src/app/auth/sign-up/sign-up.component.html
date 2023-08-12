@@ -6,27 +6,25 @@
         <div class="form-title">
           <h1>إنشاء حساب</h1>
         </div>
-        <form formGroup="form" class="form">
+        <form formGroup="form" (submit)="submitSignUPForm()" class="form">
           <!-- user name field -->
           <label>اسم المستخدم</label>
           <mat-form-field appearance="outline" class="custom-form-field">
             <input matInput class="input-style" placeholder="اسم المستخدم" formControlName="userName">
-           <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
-
+            <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
           </mat-form-field>
           <!-- Error -->
           <!-- user phone number field -->
           <label>رقم الموبايل</label>
-          <mat-form-field appearance="outline" >
+          <mat-form-field appearance="outline">
             <input class="input-style" matInput placeholder="رقم الموبايل" formControlName="phoneNumber">
-           <mat-icon matPrefix> <img src="../../../assets/icons/phone.svg" alt=""> </mat-icon>
-
+            <mat-icon matPrefix> <img src="../../../assets/icons/phone.svg" alt=""> </mat-icon>
           </mat-form-field>
           <!-- Error -->
           <!-- choose your major -->
           <mat-radio-group class="majors-group" id="majors" formControlName="majors">
             <label>اختر الأختصاص</label><br>
-            <mat-radio-button value="dentistry">طب الأسنان</mat-radio-button>
+            <mat-radio-button value="dentistry" class="radio">طب الأسنان</mat-radio-button>
             <mat-radio-button value="pharmacy">الصيدلة</mat-radio-button>
             <mat-radio-button value="architecture">الهندسة المعمارية</mat-radio-button>
             <mat-radio-button value="informaticsEng">الهندسة المعلوماتية</mat-radio-button>
