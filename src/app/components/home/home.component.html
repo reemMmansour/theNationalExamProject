@@ -1,1 +1,105 @@
-<p>home works!</p>
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- ************************************* -->
+<!-- Header -Navigation Bar-->
+<div class="header-shape">
+  <!-- background - shape -->
+  <div class="shape">
+    <!-- <img src="../../../assets/icons/shapemaker.svg" alt=""> -->
+  </div>
+  <div class="container">
+    <app-navigition-bar></app-navigition-bar>
+  </div>
+</div>
+<!-- *********************************** -->
+<main>
+  <section class="container">
+    <div class="home-content">
+      <!-- Gird With Angular Material -->
+      <mat-grid-list cols="2" rowHeight="1:1">
+        <mat-grid-tile>
+          <div class="title-content">
+            <div class="title">
+              <h1>طريقك الأسهل لإجتياز الفحص الوطني الموحد</h1>
+              <p>أصبح بإمكانك الحصول على اسئلة الامتحان الوطني بكل سهولة من مكان واحد فقط “اطلع - اختبر - احصل على
+                النتيجة </p>
+              <button type="button">إنشاء حساب</button>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <!-- image carousel -->
+        <mat-grid-tile>
+          <app-image-carousel></app-image-carousel>
+        </mat-grid-tile>
+        <mat-grid-tile rowspan="2" colspan="2">
+          <div class="specializations-content">
+            <h2>الإختصاصات</h2>
+            <div class="specializations">
+              <mat-grid-list cols="4" rowHeight="1:1">
+                <mat-grid-tile>
+                  <div>
+                    <img src="../../../assets/icons/DR.svg" alt="">
+                    <p>الطب اليشري</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <img src="../../../assets/icons/dentist.svg" alt="">
+                    <p>طب الأسنان</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <img src="../../../assets/icons/pharmacy.svg" alt="">
+                    <p>الصيدلة</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div>
+                    <img src="../../../assets/icons/nurs.svg" alt="">
+                    <p>التمريض</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2">
+                  <div>
+                    <img src="../../../assets/icons/It.svg" alt="">
+                    <p>الهندسة المعلوماتية</p>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2">
+                  <div>
+                    <img src="../../../assets/icons/ARCH.svg" alt="">
+                    <p>الهندسة المعمارية</p>
+                  </div>
+                </mat-grid-tile>
+              </mat-grid-list>
+            </div>
+          </div>
+        </mat-grid-tile>
+        <!-- image phone -->
+        <mat-grid-tile>
+          <div class="image-phone">
+            <img src="../../../assets/icons/Rectangle.svg" alt="">
+          </div>
+        </mat-grid-tile>
+        <!-- Download Application -->
+        <mat-grid-tile>
+          <div>
+            <p>يمكنك تنزيل التطبيق و استخدامه اينما كنت متوفر على انظمة الاندرويد و الايفون</p>
+            <img src="../../../assets/images/image 1.svg" alt="">
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-shape">
+    <!-- background - shape -->
+    <div class="shape">
+    </div>
+    <div class="container">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</footer>
