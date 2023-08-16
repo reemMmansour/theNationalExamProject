@@ -6,6 +6,7 @@
   /* --input-color: #b989bd; */
   --input-color: #faf4f8;
   --main-text-color: #464547;
+  --nav-color: #dcc4de;
 }
 * {
   margin: 0;
@@ -14,6 +15,10 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -28,21 +33,19 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--main-color);
 }
-
 
 /* ******************** */
 /* change background color for input */
 .mat-mdc-text-field-wrapper {
   background-color: var(--input-color);
-
 }
 /* remove border of input */
 .mdc-notched-outline .mdc-notched-outline__leading,
 .mdc-notched-outline .mdc-notched-outline__notch,
-.mdc-notched-outline .mdc-notched-outline__trailing  {
+.mdc-notched-outline .mdc-notched-outline__trailing {
   border: none !important;
+  /* border-color: var(--main-color) !important; */
 }
 /* ******************** */
 /* change color of radio button */
@@ -50,5 +53,12 @@ a {
   border-color: var(--main-color) !important;
 }
 .mdc-radio__inner-circle {
+  border-color: var(--main-color) !important;
+}
+
+/* ******* */
+.mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-notched-outline .mdc-notched-outline__trailing {
   border-color: var(--main-color) !important;
 }

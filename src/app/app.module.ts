@@ -4,22 +4,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
-import { SignUpComponent } from './auth/sign-up/sign-up.component';
-import { LogInComponent } from './auth/log-in/log-in.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import { LogInComponent } from './auth/components/log-in/log-in.component';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialModuleModule } from './module/material-module/material-module.module';
 import { AuthModule } from './auth/auth.module';
+import { SharedModule } from './module/shared/shared.module';
+import { NavigitionBarComponent } from './module/shared/components/navigition-bar/navigition-bar.component';
+import { FooterComponent } from './module/shared/components/footer/footer.component';
+import { ImageCarouselComponent } from './module/shared/components/image-carousel/image-carousel.component';
+import { PageNotFoundComponent } from './module/shared/components/page-not-found/page-not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LogInComponent,
-    PageNotFoundComponent,
     HomeComponent,
+    NavigitionBarComponent,
+    FooterComponent,
+    ImageCarouselComponent,
+    PageNotFoundComponent,
+
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -27,6 +38,8 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     MaterialModuleModule,
     AuthModule,
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,19 @@
+.example-tab-icon {
+  margin-right: 8px;
+}
+.example-tab-icon {
+  color: var(--main-color);
+}
+/* mat-tab-group{
+  width: 25rem;
+ } */
+.image {
+  /* width: 10rem; */
+  border-radius: 0.5rem;
+
+}
+.image img {
+  width: 100%;
+  /* width: 6rem; */
+  /* height: 3rem; */
+}

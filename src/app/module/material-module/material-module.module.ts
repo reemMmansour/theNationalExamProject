@@ -2,6 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatTabsModule} from '@angular/material/tabs';
+
+
 import {
   ErrorStateMatcher,
   ShowOnDirtyErrorStateMatcher,
@@ -20,6 +26,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatRadioModule,
     MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatGridListModule,
+    MatTabsModule
   ],
 })
 export class MaterialModuleModule {}
