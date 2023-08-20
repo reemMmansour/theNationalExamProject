@@ -1,0 +1,60 @@
+.button-div {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.button-div .button-one,
+.button-div .button-two {
+  /* width: fit-content; */
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 1rem;
+  padding: 0.7rem 1.7rem;
+  border: none;
+  border-radius: 3px;
+}
+.button-div .button-one {
+  background-color: var(--main-color);
+}
+
+.button-div .button-two {
+  background-color: var(--secondary-color);
+}
+
+.categories-content {
+  width: 100%;
+  text-align: center;
+}
+.categories-content h2 {
+  margin-bottom: 2rem;
+}
+
+.button-category {
+  color: var(--main-text-color);
+  text-align: center;
+  font-size: 25px;
+  margin-top: 1rem;
+  padding: 1rem 1.7rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.3rem;
+  background-color: #fff;
+}
+.category-div {
+  /* margin: 0.5rem 3rem; */
+}
+.categories-one,
+.categories-two,
+.categories-three {
+  display: grid;
+}
+
+.categories-one {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.categories-two {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.categories-three {
+  grid-template-columns: 1fr 1fr;
+}

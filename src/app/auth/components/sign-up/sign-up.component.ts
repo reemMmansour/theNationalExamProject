@@ -16,7 +16,9 @@ export class SignUpComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.createForm();
+  }
   createForm() {
     this.signUpFormValue = this.formBuilder.group({
       username: ['', [Validators.required]],
@@ -25,7 +27,7 @@ export class SignUpComponent implements OnInit {
     });
   }
   OnSubmit() {
-  let formData = new FormData();
+    let formData = new FormData();
 
     // console.log(this.signUpFormValue);
     console.log(this.signUpFormValue.value);

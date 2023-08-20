@@ -24,12 +24,12 @@
           <!-- choose your major -->
           <mat-radio-group class="majors" id="specialization" formControlName="specialization">
             <label>اختر الأختصاص</label><br>
-            <mat-radio-button value="dentistry">طب الأسنان</mat-radio-button>
-            <mat-radio-button value="pharmacy">الصيدلة</mat-radio-button>
-            <mat-radio-button value="architecture">الهندسة المعمارية</mat-radio-button>
-            <mat-radio-button value="informaticsEng">الهندسة المعلوماتية</mat-radio-button>
-            <mat-radio-button value="nursing">التمريض</mat-radio-button>
-            <mat-radio-button value="medicine">الطب البشري</mat-radio-button>
+            <mat-radio-button value="0">طب الأسنان</mat-radio-button>
+            <mat-radio-button value="2">الصيدلة</mat-radio-button>
+            <mat-radio-button value="9">الهندسة المعمارية</mat-radio-button>
+            <mat-radio-button value="4">الهندسة المعلوماتية</mat-radio-button>
+            <mat-radio-button value="3">التمريض</mat-radio-button>
+            <mat-radio-button value="1">الطب البشري</mat-radio-button>
           </mat-radio-group>
           <button type="submit" [disabled]="signUpFormValue.invalid" (click)="OnSubmit()">إنشاء حساب</button>
         </form>

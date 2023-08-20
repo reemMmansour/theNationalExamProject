@@ -47,36 +47,6 @@
   background-color: #dcc4de;
 }
 
-.home-content {
-  margin-top: 1rem;
-}
-.title-content {
-  padding-left: 5rem;
-}
-.title button {
-  width: 100%;
-  background-color: var(--main-color);
-  color: white;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-}
-.specializations-content {
-  width: 100%;
-  text-align: center;
-}
-.specializations-content h2 {
-  margin-bottom: 2rem;
-}
-.image-phone {
-  width: 10 rem;
-}
-.image-phone img {
-  max-width: 100%;
-}
 
 .footer-shape .shape {
   position: absolute;

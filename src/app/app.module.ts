@@ -16,6 +16,11 @@ import { FooterComponent } from './module/shared/components/footer/footer.compon
 import { ImageCarouselComponent } from './module/shared/components/image-carousel/image-carousel.component';
 import { PageNotFoundComponent } from './module/shared/components/page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AfterRegisterComponent } from './components/after-register/after-register.component';
+import { BeforeRegisterComponent } from './components/before-register/before-register.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ImageCarouselComponent,
     PageNotFoundComponent,
+    AfterRegisterComponent,
+    BeforeRegisterComponent,
 
 
 
@@ -39,7 +46,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModuleModule,
     AuthModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgImageSliderModule,
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
