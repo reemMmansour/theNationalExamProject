@@ -8,19 +8,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
 import { LogInComponent } from './auth/components/log-in/log-in.component';
 import { HomeComponent } from './components/home/home.component';
-import { MaterialModuleModule } from './module/material-module/material-module.module';
+import { MaterialModuleModule } from './shared/module/material-module.module';
 import { AuthModule } from './auth/auth.module';
-import { SharedModule } from './module/shared/shared.module';
-import { NavigitionBarComponent } from './module/shared/components/navigition-bar/navigition-bar.component';
-import { FooterComponent } from './module/shared/components/footer/footer.component';
-import { ImageCarouselComponent } from './module/shared/components/image-carousel/image-carousel.component';
-import { PageNotFoundComponent } from './module/shared/components/page-not-found/page-not-found.component';
+import { SharedModule } from './shared/shared.module';
+import { NavigitionBarComponent } from './shared/components/navigition-bar/navigition-bar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { ImageCarouselComponent } from './shared/components/image-carousel/image-carousel.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AfterRegisterComponent } from './components/after-register/after-register.component';
 import { BeforeRegisterComponent } from './components/before-register/before-register.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { RouterModule } from '@angular/router';
-
+import { MaterialsSpecializationComponent } from './components/materials-specialization/materials-specialization.component';
+import { CoursesQuestionsComponent } from './components/courses-questions/courses-questions.component';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { StartTaskComponent } from './components/start-task/start-task.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +37,10 @@ import { RouterModule } from '@angular/router';
     PageNotFoundComponent,
     AfterRegisterComponent,
     BeforeRegisterComponent,
-
-
-
-
+    MaterialsSpecializationComponent,
+    CoursesQuestionsComponent,
+    LoadingSpinnerComponent,
+    StartTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,6 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     NgImageSliderModule,
     RouterModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent],

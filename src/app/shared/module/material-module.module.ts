@@ -5,7 +5,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 import {
@@ -29,7 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatProgressBarModule
   ],
 })
 export class MaterialModuleModule {}

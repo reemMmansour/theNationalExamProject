@@ -1,4 +1,11 @@
-<div class="container">
+<!-- ************************* -->
+<!-- ************************* -->
+<!-- ************************* -->
+<!-- Loading Spinerr -->
+<div class="loading-spinner" *ngIf="loading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div [ngClass]="loading===true ? 'loading-spinner-active' : 'container'">
   <div class="main-container">
     <!-- Sign Up Form -->
     <div class="right-side">
@@ -6,29 +13,40 @@
         <div class="form-title">
           <h1>تسجيل الدخول</h1>
         </div>
-        <form [formGroup]="form" class="form">
+        <form [formGroup]="logInForm" class="form">
+          <!-- ********************** -->
           <!-- user name field -->
           <label>اسم المستخدم</label>
           <mat-form-field appearance="outline">
             <input matInput class="input-style" placeholder="اسم المستخدم" formControlName="username">
             <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
+            <!-- Error Message -->
+            <mat-hint style="color:red;"
+              *ngIf="logInForm.get('username')?.touched && logInForm.get('username')?.errors?.['required']"> ادخل اسم
+              المستخدم من فضلك </mat-hint>
           </mat-form-field>
-          <!-- Error -->
+          <!-- ********************** -->
           <!-- user code -->
           <label>رمز الدخول</label>
           <mat-form-field appearance="outline">
             <input matInput type="password" class="input-style" placeholder="رمز الدخول" formControlName="password">
             <mat-icon matPrefix> <img src="../../../assets/icons/key.svg" alt=""> </mat-icon>
-            <!-- <mat-error *ngIf="form.hasError('required')"> Email is <strong>required</strong>
-            </mat-error> -->
+            <!-- Error Message-->
+            <mat-hint style="color:red;"
+              *ngIf="logInForm.get('password')?.touched && logInForm.get('password')?.errors?.['required']"> ادخل رمز
+              الدخول من فضلك </mat-hint>
+            <mat-hint style="color:red;" *ngIf="logInForm.get('password')?.errors?.['pattern']"> رمز الدخول غير صالح
+            </mat-hint>
           </mat-form-field>
-          <button type="submit">تسجيل الدخول</button>
+          <!-- ********************** -->
+          <button type="submit" (click)="OnSubmit()" [disabled]="logInForm.invalid">تسجيل الدخول</button>
         </form>
         <!-- Sign Up -->
         <div class="sign-up-div">
           <p> ليس لديك حساب ؟<a href="#" class="sign-up" routerLink="/signup"> أنشأ حساب</a>
           </p>
         </div>
+        <!-- media Query -->
         <div class="visitor-div">
           <a href="#" class="visitor" routerLink="/home">المتابعة كزائر</a>
         </div>

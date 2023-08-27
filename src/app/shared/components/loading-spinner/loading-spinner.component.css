@@ -1,0 +1,9 @@
+/* Change Color Progress Bar */
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: var(--main-color);
+  --mdc-linear-progress-track-color: var(--light-pink-color);
+}
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-height: 5px;
+  --mdc-linear-progress-track-height: 5px;
+}

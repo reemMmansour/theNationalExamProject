@@ -1,3 +1,9 @@
+
+
+<header>
+  <app-navigition-bar></app-navigition-bar>
+</header>
+
 <div class="home-content">
   <mat-grid-list cols="1" rowHeight="3:1">
     <mat-grid-tile>
@@ -5,7 +11,7 @@
     </mat-grid-tile>
     <mat-grid-tile>
       <div class="button-div">
-        <button type="button" class="button-one">الدورات</button>
+        <button type="button" routerLink="/questions" class="button-one">الدورات</button>
         <button type="button" class="button-two">بنك الأسئلة</button>
       </div>
     </mat-grid-tile>
@@ -32,7 +38,7 @@
               <button type="button" class="button-category">الذكاء الاصطناعي</button>
             </div>
             <div class="category-div">
-              <button type="button" class="button-category">الشبكات</button>
+              <button type="button" class="button-category" routerLink="/starttask">الشبكات</button>
             </div>
             <div class="category-div">
               <button type="button" class="button-category">هندسة البرمجيات</button>

@@ -1,0 +1,84 @@
+/* **********[ container ]********** */
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+/* ** larg ** */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+
+/* ** medium ** */
+@media (max-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* ** small ** */
+@media (max-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+/* ********************* */
+
+.footer-container {
+  /* margin-top: 10rem; */
+}
+.footer-toolbar {
+  position: relative;
+  /* bottom: 0; */
+  /* right: 0; */
+  padding: 5rem 0 0;
+  background-color: transparent;
+  /* z-index: 88; */
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.footer-bottom,
+.footer-top {
+  display: flex;
+}
+.footer-top p {
+  padding-left: 4rem;
+}
+.footer-bottom p {
+  padding-left: 4rem;
+}
+.icon-social {
+}
+.icon {
+  /* width: 4rem; */
+  /* padding: 1rem; */
+  margin-left: 1rem;
+}
+.icon img {
+  width: 100%;
+}
+/* **************** */
+.footer-shape {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  bottom: 0;
+}
+.footer-shape .shape {
+  position: absolute;
+  bottom: 0;
+  /* top: 0; */
+  /* right: 0; */
+  z-index: -1;
+}
+
+.shape-mobile {
+  display: none;
+}
+
+svg {
+  /* padding: 0; */
+}

@@ -1,4 +1,9 @@
-.container {
-  /* margin: 0;
-  padding: 0; */
+/* .container { */
+  /* margin: 0 !important;
+  padding: 0 !important; */
+/* } */
+.loading-spinner {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
 }

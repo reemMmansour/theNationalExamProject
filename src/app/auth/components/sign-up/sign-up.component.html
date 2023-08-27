@@ -1,37 +1,52 @@
-<div class="container">
+<!-- ************************* -->
+<!-- ************************* -->
+<!-- ************************* -->
+<!-- Loading Spinner -->
+<div class="loading-spinner" *ngIf="loading">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+<div [ngClass]="loading===true ? 'loading-spinner-active' : 'container'">
   <div class="main-container">
-    <!-- Sign Up Form -->
     <div class="right-side">
       <div class="form-container">
         <div class="form-title">
           <h1>إنشاء حساب</h1>
         </div>
-        <form [formGroup]="signUpFormValue" class="form">
+        <form [formGroup]="signUpForm" class="form">
           <!-- user name field -->
           <label>اسم المستخدم</label>
           <mat-form-field appearance="outline">
             <input matInput class="input-style" placeholder="اسم المستخدم" formControlName="username">
             <mat-icon matPrefix> <img src="../../../assets/icons/ic_user.svg" alt=""> </mat-icon>
+            <!-- Error Message -->
+            <mat-hint style="color:red;"
+              *ngIf="signUpForm.get('username')?.touched && signUpForm.get('username')?.errors?.['required']"> ادخل اسم
+              المستخدم من فضلك </mat-hint>
           </mat-form-field>
-          <!-- Error -->
           <!-- user phone number field -->
           <label>رقم الموبايل</label>
           <mat-form-field appearance="outline">
-            <input matInput class="input-style"  placeholder="رقم الموبايل" formControlName="phone">
+            <input matInput class="input-style" placeholder="رقم الموبايل" formControlName="phone">
             <mat-icon matPrefix> <img src="../../../assets/icons/phone.svg" alt=""> </mat-icon>
+            <mat-hint style="color:red;"
+              *ngIf="signUpForm.get('phone')?.touched && signUpForm.get('phone')?.errors?.['required']"> ادخل رقم
+              الموبايل من فضلك </mat-hint>
+            <mat-hint style="color:red;" *ngIf="signUpForm.get('phone')?.errors?.['pattern']"> رجاءا ادخل رقم الموبايل
+              بشكل صحصح </mat-hint>
+            <!-- Error -->
           </mat-form-field>
-          <!-- Error -->
+          <!-- ************************* -->
           <!-- choose your major -->
+          <!-- <mat-radio-group class="majors" id="specialization" formControlName="college_id"> -->
+          <label class="majors-label">اختر الأختصاص</label>
           <mat-radio-group class="majors" id="specialization" formControlName="specialization">
-            <label>اختر الأختصاص</label><br>
-            <mat-radio-button value="0">طب الأسنان</mat-radio-button>
-            <mat-radio-button value="2">الصيدلة</mat-radio-button>
-            <mat-radio-button value="9">الهندسة المعمارية</mat-radio-button>
-            <mat-radio-button value="4">الهندسة المعلوماتية</mat-radio-button>
-            <mat-radio-button value="3">التمريض</mat-radio-button>
-            <mat-radio-button value="1">الطب البشري</mat-radio-button>
+            <mat-radio-button class="example-radio-button" *ngFor="let specialization of allSpecialization"
+              [value]="specialization.id">
+              {{specialization.name}}
+            </mat-radio-button>
           </mat-radio-group>
-          <button type="submit" [disabled]="signUpFormValue.invalid" (click)="OnSubmit()">إنشاء حساب</button>
+          <!-- ************************* -->
+          <button type="submit" [disabled]="signUpForm.invalid" (click)="OnSubmit()">إنشاء حساب</button>
         </form>
         <div class="log-in-div">
           <p> لديك حساب ؟ <a href="#" class="log-in" routerLink="/login"> سجل دخول</a>
@@ -42,7 +57,7 @@
     <!-- image -->
     <div class="left-side">
       <div class="left-header">
-        <div class="icon-back">
+        <div class="icon-back" routerLink="/home">
           <mat-icon> <img src="../../../../assets/icons/ic_back.svg" alt=""></mat-icon>
         </div>
         <div class="form-title">

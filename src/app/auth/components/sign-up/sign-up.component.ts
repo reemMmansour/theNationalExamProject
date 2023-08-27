@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { Route, Router } from '@angular/router';
+import { Users } from 'src/app/model/Users';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +15,12 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent implements OnInit {
-  signUpFormValue!: FormGroup;
+  signUpForm!: FormGroup;
+  users?: any;
+  loading: boolean = false;
+
+  allSpecialization?: any[];
+  collages?: any;
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
@@ -17,35 +28,91 @@ export class SignUpComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.loading = true;
     this.createForm();
+    // this.getStudents();
+    this.getAllSpecialization();
+    // this.createFormvalue();
   }
   createForm() {
-    this.signUpFormValue = this.formBuilder.group({
+    this.signUpForm = this.formBuilder.group({
       username: ['', [Validators.required]],
-      phone: ['', [Validators.required, Validators.maxLength(10)]],
-      specialization: ['dentistry'],
+      phone: [
+        '',
+        [
+          Validators.pattern(/^09\d{8}$/),
+          Validators.required,
+          Validators.maxLength(10),
+        ],
+      ],
+      specialization: [''],
     });
   }
+  // createFormvalue() {
+  //   console.log(this.signUpForm.value);
+  //  }
+
+  // Get All Specialization Method
+  getAllSpecialization() {
+    this.authService.getSpecialization().subscribe(
+      (result: any) => {
+        this.loading = false;
+
+        // console.log(result);
+        // console.log(result.status);
+        // console.log(result.data.colleges);
+        this.allSpecialization = result.data.colleges;
+        this.allSpecialization?.forEach((ele) => {
+          console.log(ele.name);
+          let collage = ele.name;
+          return collage;
+        });
+        console.log(this.collages);
+        // console.log(this.allSpecialization);
+        // console.log(this.allSpecialization[0]);
+      },
+      (error) => {
+        this.loading = false;
+
+        console.log('Error retrieving specialization:', error);
+      }
+    );
+  }
+
+  // OnSubmit Method
   OnSubmit() {
     let formData = new FormData();
-
     // console.log(this.signUpFormValue);
-    console.log(this.signUpFormValue.value);
-    // var formData: any = new FormData();
+    console.log(this.signUpForm.value);
+    formData.append('name', this.signUpForm.value.username);
+    // formData.append('mobile_phone', this.signUpForm.value.phone);
+    formData.append('phone', this.signUpForm.value.phone);
+    // formData.append('specialization_id', this.signUpForm.value.specialization);
+    formData.append('college_id', this.signUpForm.value.specialization);
+    this.authService.createUser(formData).subscribe(
+      (result) => {
+        this.loading = false;
 
-    formData.append('name', this.signUpFormValue.value.username);
-    formData.append('mobile_phone', this.signUpFormValue.value.phone);
-    formData.append(
-      'specialization_id',
-      this.signUpFormValue.value.specialization
+        // if(result.code=200 ){}
+        alert('success');
+        // console.log(result);
+        this.router.navigateByUrl('/login');
+      },
+      (error) => {
+        this.loading = false;
+
+        alert('something Error');
+      }
     );
-    // const model = {
-    //   name: this.signUpFormValue.value.username,
-    //   mobile_phone: this.signUpFormValue.value.phone,
-    // };
-    this.authService.createUser(formData).subscribe((result) => {
-      alert('success');
-      this.router.navigateByUrl('/login');
-    });
   }
 }
+
+//*************************
+
+// getErrorMessage() {
+//   if (this.phone.hasError('required')) {
+//     return 'You must enter a value';
+//   }
+
+//   return this.phone.hasError('email') ? 'Not a valid email' : '';
+// }

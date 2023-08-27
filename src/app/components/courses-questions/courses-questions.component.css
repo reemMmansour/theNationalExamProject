@@ -6,6 +6,7 @@
 .container {
   max-width: 1190px;
   margin: 0 auto;
+  padding-top: 2rem;
 }
 
 /* ** larg ** */
@@ -28,35 +29,20 @@
     max-width: 750px;
   }
 }
-.header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
 /* **********[ Home content ]********** */
 
-.footer-shape {
-  /* width: 100vw; */
-position: relative;
+.header-shape {
+  position: sticky;
+  top: 0;
+  z-index: 77;
 }
-.footer-shape .shape {
-  position: absolute;
-  bottom: -6rem;
-  /* top: 0; */
+.header-shape .shape {
+  /* position: ; */
+  top: 0;
   right: 0;
-  z-index: -1;
-}
-.rectangle-shape {
-  position: relative;
-  bottom: 25rem;
-  z-index: -1;
 }
 
 .shape-mobile {
   display: none;
-}
-
-svg {
-  /* padding: 0; */
 }

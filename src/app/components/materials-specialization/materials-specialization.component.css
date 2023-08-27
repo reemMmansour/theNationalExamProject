@@ -6,6 +6,7 @@
 .container {
   max-width: 1190px;
   margin: 0 auto;
+  padding-top: 2rem;
 }
 
 /* ** larg ** */
@@ -28,14 +29,19 @@
     max-width: 750px;
   }
 }
-.header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
 /* **********[ Home content ]********** */
 
+.header-shape {
+  position: sticky;
+  top: 0;
+  z-index: 77;
+}
+.header-shape .shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .footer-shape {
   /* width: 100vw; */
 position: relative;

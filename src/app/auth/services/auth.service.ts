@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/app/environments/environment';
 import { Users } from 'src/app/model/Users';
 
@@ -8,11 +8,21 @@ import { Users } from 'src/app/model/Users';
   providedIn: 'root',
 })
 export class AuthService implements OnInit {
-  // users: object[] = [];
-
   constructor(private http: HttpClient) {}
   ngOnInit(): void {}
-  createUser(model: any) {
-    return this.http.post(environment.baseAPI + 'register', model);
+  // create User (register)
+  createUser(model: any): Observable<any> {
+    return this.http.post(`${environment.baseAPI}register`, model);
+  }
+  // LogIn User
+  loginUser(model: any): Observable<any> {
+    return this.http.post(`${environment.baseAPI}login`, model);
+  }
+  //auth/login
+  //get all specislization
+  getSpecialization() {
+    return this.http.get(
+      `${environment.baseAPI}college/all`
+    );
   }
 }

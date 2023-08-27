@@ -1,0 +1,79 @@
+/* ************************************** */
+/* ************************************** */
+/* ************************************** */
+
+/* **********[ container ]********** */
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+/* ** larg ** */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+
+/* ** medium ** */
+@media (max-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* ** small ** */
+@media (max-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+/* ************************ */
+.nav-container {
+  margin-bottom: 7rem;
+}
+
+mat-icon {
+  color: black;
+  margin-left: 0.5rem;
+}
+.back {
+  display: flex;
+}
+.mark {
+  display: flex;
+}
+.mark p {
+  margin-left: 2rem;
+}
+.import-info {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.button-task {
+  /* width: fit-content; */
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 1rem;
+  padding: 0.7rem 1.7rem;
+  border: none;
+  border-radius: 3px;
+
+  background-color: var(--main-color);
+}
+.question {
+  margin: 4rem auto;
+  width: 30rem;
+  border: 3px solid var(--main-color);
+  border-radius: 0.7rem;
+  padding: 2rem;
+}
+.question-radio-button {
+  display: flex;
+
+  flex-direction: column;
+}

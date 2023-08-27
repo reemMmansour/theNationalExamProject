@@ -25,16 +25,20 @@
   <span class="dot"></span>
 </div> -->
 <!-- ****************************** -->
+<!-- ****************************** -->
 <div class="container">
   <div class="slideshow-container">
-    <div class="my-slides animation-slides" *ngFor="let slide of slides; let i = index" [hidden]="activeSlide !== i">
-      <img class="image" [src]="slide.url">
-      <!-- <div class="text">{{ slide.caption }}</div> -->
+    <div class="my-slides animation-slides" *ngFor="let slide of allSlides; let i = index" [hidden]="activeSlide !== i">
+      <a href="{{slide.link}}">
+        <div class="img-slider">
+          <img class="image" src="{{slide.image_url}}">
+        </div>
+      </a>
     </div>
   </div>
   <br>
   <div style="text-align:center">
-    <span class="dot" *ngFor="let slide of slides; let i = index" [class.active]="activeSlide === i"
+    <span class="dot" *ngFor="let slide of allSlides; let i = index" [class.active]="activeSlide === i"
       (click)="showSlide(i)"></span>
   </div>
 </div>
